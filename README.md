@@ -6,9 +6,9 @@ Utils for checking validity of password.
 
 ##### isCommon(password, opts)
 Case-insensitive check if password is commonly-used. Returns true if password is commonly-used. Returns false otherwise.
-#
+
 Parameter      | Type    | Description    |
-| ------------- |:-------------:|:-------------:|
+| ------------- |-------------|-------------|
 |password      |  String | Password to be checked |
 | opts      |JSON      |```Optional``` Options object containing **restriction** & **exact** params |
 | opts.restriction      |Integer    |```Optional``` Restricts password checker to top-n commonly-used passwords. Default value is 100 |

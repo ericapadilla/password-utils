@@ -99,6 +99,17 @@ describe('index.js', function() {
             });
           });
         });
+
+        context('when exact is set to false', function() {
+          context('when password is a substring of a commonly-used password', function() {
+            it('should return true', function() {
+              pass.isCommon('zzzzPasswordzzzz', { exact: false }).should.be.true;
+              pass.isCommon('4234234PASSWORD', { exact: false }).should.be.true;
+              pass.isCommon('passwordsdfsd312314', { exact: false }).should.be.true;
+              pass.isCommon('423423pass', { exact: false }).should.be.true;
+            });
+          });
+        });
       });
     });
   });

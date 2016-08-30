@@ -1,0 +1,25 @@
+{
+  "name": "password-utils",
+  "version": "0.0.1",
+  "description": "Utils for checking if the password is valid",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.15.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.0.2",
+    "chai": "^3.5.0"
+  },
+  "scripts": {
+    "test": "mocha tests/index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ericapadilla/password-utils.git"
+  },
+  "keywords": [
+    "password"
+  ],
+  "author": "Erica Padilla",
+  "license": "ISC"
+}

@@ -12,7 +12,7 @@ Parameter      | Type    | Description    |
 |password      |  String | Password to be checked |
 | opts      |JSON      |```Optional``` Options object containing **restriction** & **exact** params |
 | opts.restriction      |Integer    |```Optional``` Restricts password checker to top-n commonly-used passwords. Default value is 100 |
-| opts.exact      |Boolean    |```Optional``` Checks if password is the exactly the same as the commonly-used password. Default value is true. Set to false, if you want to check if the password passed is a substring |
+| opts.exact      |Boolean    |```Optional``` Checks if password is the exactly the same as the commonly-used password. Default value is true. Set to false, if you want to check if the commonly-used password is a prefix |
 
 ```
 var pass = require('password-utils');

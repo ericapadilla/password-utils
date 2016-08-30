@@ -29,7 +29,7 @@ module.exports = {
       if (_defaults.exact && value === password) {
         common = true;
         return false;
-      } else if (!_defaults.exact && password.indexOf(value) > -1) {
+      } else if (!_defaults.exact && password.indexOf(value) === 0) {
         common = true;
         return false;
       }

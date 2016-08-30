@@ -101,12 +101,18 @@ describe('index.js', function() {
         });
 
         context('when exact is set to false', function() {
-          context('when password is a substring of a commonly-used password', function() {
+          context('when a commonly-used password is the prefix of the password', function() {
             it('should return true', function() {
-              pass.isCommon('zzzzPasswordzzzz', { exact: false }).should.be.true;
-              pass.isCommon('4234234PASSWORD', { exact: false }).should.be.true;
+              pass.isCommon('Passwordzzzz', { exact: false }).should.be.true;
               pass.isCommon('passwordsdfsd312314', { exact: false }).should.be.true;
-              pass.isCommon('423423pass', { exact: false }).should.be.true;
+              pass.isCommon('pass423423', { exact: false }).should.be.true;
+            });
+          });
+
+          context('when a commonly-used password is not the prefix of the password', function() {
+            it('should return true', function() {
+              pass.isCommon('4234234PASSWORDsffsdfsdf', { exact: false }).should.be.false;
+              pass.isCommon('423423pass', { exact: false }).should.be.false;
             });
           });
         });
